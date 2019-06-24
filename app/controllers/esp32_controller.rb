@@ -46,7 +46,7 @@ class Esp32Controller < ApplicationController
   private
 
   def sendgrid_api_key
-    return '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'
+    return 'sss'
   end
 
 end
