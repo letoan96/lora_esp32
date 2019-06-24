@@ -22,6 +22,7 @@ class Esp32Controller < ApplicationController
     ArduinoChannel.send_data(@humidity, @temperature, @gas)
 
     if @gas.to_i > 600 && @@alert == true
+      puts "---------------------send mail-------------------------------------"
       send_email('phuonghao1705@gmail.com', @gas)
     end
     render json: {}, status: 200
@@ -29,7 +30,7 @@ class Esp32Controller < ApplicationController
 
   def send_email(email, gas)
     from = Email.new(email: 'thesis@gmail.com')
-    to = Email.new(email: 'email')
+    to = Email.new(email: email)
 
     subject = 'Gas level alarm.'
     content = Content.new(type: 'text/plain', value: "The gas level is above #{gas}.")
