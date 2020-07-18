@@ -7,5 +7,6 @@ test:
 
 production:
   adapter: redis
-  url: redis://redistogo:7422704fe5713fee9258a6632b1b6f74@pearlfish.redistogo.com:10027/
+  url: redis://redistogo:1d85576e6641ef682dfc1748ae7a94f5@tarpon.redistogo.com:11818/
+  
   # channel_prefix: arduino-webserver_production
