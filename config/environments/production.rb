@@ -9,9 +9,9 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-  config.web_socket_server_url = "wss://thesis2019lph.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://thesis2019lph.herokuapp.com', 'http://thesis2019lph.herokuapp.com']
-    config.action_cable.url = ['https://thesis2019lph.herokuapp.com/']
+  config.web_socket_server_url = "wss://sim7600.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://sim7600.herokuapp.com', 'http://sim7600.herokuapp.com']
+  config.action_cable.url = ['https://sim7600.herokuapp.com/']
 
   config.action_cable.disable_request_forgery_protection = true
   # Full error reports are disabled and caching is turned on.
