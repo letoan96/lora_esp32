@@ -235,6 +235,13 @@ App.arduino = App.cable.subscriptions.create("ArduinoChannel", {
     // temperatureChart.addPoint([x, data.temperature], true, true);
     // humidityChart.addPoint([x, data.humidity], true, true);
     // gasChart.addPoint([x, data.gas], true, true);
+
+    if (data.mode){
+      $('#mode').html(data.mode)
+      $('#control-mode').prop('checked', data.mode == 'control')
+      return
+    }
+
     if (data.light_1){
       light1 = '#light-1-' + data.light_1
       light3 = '#light-3-' + data.light_1
@@ -246,11 +253,6 @@ App.arduino = App.cable.subscriptions.create("ArduinoChannel", {
       light4 = '#light-4-' + data.light_2
       $(light2).prop('checked', true);
       $(light4).prop('checked', true);
-    }
-
-    if (data.mode){
-      $('#mode').html(data.mode)
-      $('#control-mode').prop('checked', data.mode == 'control')
     }
   },
   changeMode: function(msg) {
@@ -327,14 +329,28 @@ $(function() {
    e.preventDefault()
   })
 
-  $('#red-time-1').on('change', function (e) {
-    time_red_1 = e.target.value
-    App.arduino.set_red_light_1(time_red_1)
+  // $('#red-time-1').on('change', function (e) {
+  //   time_red_1 = e.target.value
+  //   App.arduino.set_red_light_1(time_red_1)
+  // });
+
+  // $('#green-time-1').on('change', function (e) {
+  //   time_green_1 = e.target.value
+  //   App.arduino.set_green_light_1(time_green_1)
+  // });
+
+  $("#red-time-1").on('keyup', function (e) {
+    if (e.keyCode === 13) {
+      time_red_1 = e.target.value
+      App.arduino.set_red_light_1(time_red_1)
+    }
   });
 
-  $('#green-time-1').on('change', function (e) {
-    time_green_1 = e.target.value
-    App.arduino.set_green_light_1(time_green_1)
+  $("#green-time-1").on('keyup', function (e) {
+    if (e.keyCode === 13) {
+      time_green_1 = e.target.value
+      App.arduino.set_green_light_1(time_green_1)
+    }
   });
 
 })

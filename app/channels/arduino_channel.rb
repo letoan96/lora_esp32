@@ -23,9 +23,9 @@ class ArduinoChannel < ApplicationCable::Channel
     
     s = TCPSocket.open("localhost", 18207)
     if data["mode"] == "auto"
-      s.puts "aaaaaaaaaa"
+      s.puts "auto"
     else
-      s.puts "cccccccccc"
+      s.puts "control"
     end
     s.close
   end
@@ -33,11 +33,11 @@ class ArduinoChannel < ApplicationCable::Channel
   def change_light_1(data)
     s = TCPSocket.open("localhost", 18207)
     if data["color"] == "r"
-      s.puts "mmmm"
+      s.puts "red1"
     elsif data["color"] == "g"
-      s.puts "bbbb"
+      s.puts "green1"
     else
-      s.puts "xxxx"
+      s.puts "yellow1"
     end
 
     s.close
@@ -46,11 +46,11 @@ class ArduinoChannel < ApplicationCable::Channel
   def change_light_2(data)
     s = TCPSocket.open("localhost", 18207)
     if data["color"] == "r"
-      s.puts "iiii"
+      s.puts "red2"
     elsif data["color"] == "g"
-      s.puts "kkkk"
+      s.puts "green2"
     else
-      s.puts "pppp"
+      s.puts "yellow2"
     end
     s.close
   end
@@ -58,8 +58,7 @@ class ArduinoChannel < ApplicationCable::Channel
   def set_red_light_1(data)
      s = TCPSocket.open("localhost", 18207)
     time = data["time"]
-    code = time.to_i * 1111111111
-    d = "jjjjjjjjjj" + code.to_s
+    d = "redtime=" + time.to_s
     s.puts d
     s.close
   end
@@ -67,8 +66,7 @@ class ArduinoChannel < ApplicationCable::Channel
   def set_green_light_1(data)
      s = TCPSocket.open("localhost", 18207)
     time = data["time"]
-    code = time.to_i * 1111111111
-    d = "ddddddddddd" + code.to_s
+    d = "greentime=" + time.to_s
     s.puts d
     s.close
   end

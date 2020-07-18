@@ -43,8 +43,8 @@ class Esp32Controller < ApplicationController
   # end
 
   def update
-    @light_1 = params[:l1]
-    @light_2 = params[:l2]
+    @light_1 = params[:l1] || 0
+    @light_2 = params[:l2] || 0
     @mode = params[:mode]
     ArduinoChannel.send_data(@light_1, @light_2, @mode)
   end
