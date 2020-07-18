@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root 'esp32#index'
 
   post   'post_data' => 'esp32#post_data'
+  post '/api/update_light', to: 'esp32#update'
 end

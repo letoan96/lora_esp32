@@ -13,3 +13,144 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+body {
+   background-image: url(https://f.cl.ly/items/2K0P3z2y3X3c052f2B3Y/Image%202013.04.30%2021%3A28%3A02.png);
+}
+
+.wrapper {
+   display: flex;
+   justify-content: space-around;
+}
+ .header {
+   display: flex;
+   justify-content: center;
+}
+ .box {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+ .traffic-light {
+   background-color: #333;
+   width: 120px;
+   height: 320px;
+   border-radius: 30px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+ input[type=radio] {
+   -webkit-appearance: none;
+   width: 80px;
+   height: 80px;
+   background-color: grey;
+   border-radius: 100%;
+   display: block;
+}
+/*-----------------------------------------------------*/
+ input[type=radio].color1 {
+   background-color: #b30000;
+}
+ input[type=radio].color1:hover {
+   background-color: #FF0000;
+   box-shadow: 0 0 6em #ff3333;
+}
+ input[type=radio].color1:checked {
+   background-color: #FF0000;
+   box-shadow: 0 0 6em #ff3333;
+}
+
+/*-----------------------------------------------------*/
+ input[type=radio].color2 {
+   background-color: #b3b300;
+}
+ input[type=radio].color2:hover {
+   background-color: #FFFF00;
+   box-shadow: 0 0 6em #ffff33;
+}
+ input[type=radio].color2:checked {
+   color: #FFFF00;
+   background-color: #FFFF00;
+   box-shadow: 0 0 6em #ffff33;
+}
+
+/*-----------------------------------------------------*/
+ input[type=radio].color3 {
+   background-color: #00b300;
+}
+ input[type=radio].color3:hover {
+   background-color: #00FF00;
+   box-shadow: 0 0 6em #33ff33;
+}
+ input[type=radio].color3:checked {
+   background-color: #00FF00;
+   box-shadow: 0 0 6em #33ff33;
+}
+
+/*-----------------------------------------------------*/
+ input[type=number] {
+   text-align: center;
+   position: relative;
+   margin-top: 20px;
+}
+ * {
+   user-select: none;
+   outline: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+ 

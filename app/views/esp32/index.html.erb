@@ -8,12 +8,127 @@
 
 <center>
 <h3>International University - Viet Nam National University</h3>
-<h4>Air quality and Gas leakage monitoring system </h5>
-<h4 class="blue">Ly Phuong Hao - EEEEIU14011 </h5>
+<h4>Võ Thiện - Thesis 2020<h4>
 </center>
 
+<div class="wrapper">
+  <div class="box">
+    <h3> Traffic light 1 </h3>
+    <div class="traffic-light light-1">
+      <input type="radio" name="traffic-light-color1" class="color1" value="color1" id="light-1-red"/>
+      <input type="radio" name="traffic-light-color1" class="color2" value="color2" id="light-1-yellow"/>
+      <input type="radio" name="traffic-light-color1" class="color3 active" value="color3" id="light-1-green"/>
+    </div>
+    <!-- ------------------------------------------------------------------------- -->
+    
+    <!-- ------------------------------------------------------------------------- -->
+  </div>
 
-<div class="row">
+  <div class="box">
+    <h2> Traffic light 2 </h2>
+    <div class="traffic-light light-2">
+      <input type="radio" name="traffic-light-color2" class="color1" value="color1" id="light-2-red"/>
+      <input type="radio" name="traffic-light-color2" class="color2" value="color2" id="light-2-yellow"/>
+      <input type="radio" name="traffic-light-color2" class="color3" value="color3" id="light-2-green"/>
+    </div>
+    <!-- <div>
+      <label style="text-align: center;">Red Light duration</label for="red-time-2">
+        <select class="form-control" id="red-time-2">
+        <option value=10 default>10</option>
+        <option value=20>20</option>
+        <option value=30>30</option>
+        <option value=40>40</option>
+        <option value=50>50</option>
+      </select>
+    </div>
+    <div>
+      <label style="text-align: center;">Green Ligth duration</label for="green-time-2">
+      <select class="form-control" id="green-time-2">
+        <option value=10 default>10</option>
+        <option value=20>20</option>
+        <option value=30>30</option>
+        <option value=40>40</option>
+        <option value=50>50</option>
+      </select>  
+    </div>
+    <button class="btn btn-secondary" id="time-2-apply">Apply</button> -->
+  </div>
+
+  <div class="box">
+    <h2> Traffic light 3 </h2>
+    <div class="traffic-light light-3">
+      <input type="radio" name="traffic-light-color3" class="color1" value="color1" id="light-3-red" readonly="" />
+      <input type="radio" name="traffic-light-color3" class="color2" value="color2" id="light-3-yellow" readonly="" />
+      <input type="radio" name="traffic-light-color3" class="color3" value="color3" id="light-3-green" readonly="" />
+    </div>
+   <!--  <div>
+       <input type="number" id="red-time-3" value="10" disabled="" /><br>
+      <label style="text-align: center;">Red Light duration</label for="red-time-3">
+    </div>
+    <div>
+       <input type="number" id="green-time-3" value="10" disabled="" /><br>
+      <label style="text-align: center;">Green Ligth duration</label for="green-time-3">
+    </div>
+    <button class="btn btn-secondary" id="time-3-apply" disabled="">Apply</button> -->
+  </div>
+
+  <div class="box">
+    <h2> Traffic light 4 </h2>
+    <div class="traffic-light light-4">
+      <input type="radio" name="traffic-light-color4" class="color1" value="color1" id="light-4-red" readonly="" />
+      <input type="radio" name="traffic-light-color4" class="color2" value="color2" id="light-4-yellow" readonly="" />
+      <input type="radio" name="traffic-light-color4" class="color3" value="color3" id="light-4-green" readonly="" />
+    </div>
+    <!-- <div display='false'>
+       <input type="number" id="red-time-4" value="10" disabled="" /><br>
+      <label style="text-align: center;">Red Light duration</label for="red-time-4">
+    </div>
+    <div>
+       <input type="number" id="green-time-4" value="10" disabled="" /><br>
+      <label style="text-align: center;">Green Ligth duration</label for="green-time-4">
+    </div>
+    <button class="btn btn-secondary" id="time-4-apply" disabled="">Apply</button> -->
+  </div>
+</div>
+
+<div class="box mt-3">
+  <center>
+    <div>
+      <label style="text-align: center;">Red Light duration</label for="red-time-1">
+      <select class="form-control" id="red-time-1">
+        <option value=10>10</option>
+        <option value=20>20</option>
+        <option value=30>30</option>
+        <option value=40>40</option>
+        <option value=50>50</option>
+      </select>
+    </div>
+    <div>
+      <label style="text-align: center;">Green Ligth duration</label for="green-time-1">
+      <select class="form-control" id="green-time-1">
+        <option value=10>10</option>
+        <option value=20>20</option>
+        <option value=30>30</option>
+        <option value=40>40</option>
+        <option value=50>50</option>
+      </select>  
+    </div>
+  </center>  
+</div>
+
+<div class="mt-3">
+  <center>
+    <label class="switch">
+      <input type="checkbox" id="control-mode" checked="">
+      <span class="slider"></span>
+    </label>
+    <h5>Control Mode</h5>
+    <p id="mode">auto<p>
+  </center>
+</div>
+
+
+<!-- <div class="row">
     <div class="col text-center" style="margin: 30px;">
       <h5>Temperature Chart</h5>
       <div id="container_temperature" style="height: 400px; width: 600px"></div>
