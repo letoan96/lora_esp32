@@ -235,7 +235,7 @@ App.arduino = App.cable.subscriptions.create("ArduinoChannel", {
     // temperatureChart.addPoint([x, data.temperature], true, true);
     // humidityChart.addPoint([x, data.humidity], true, true);
     // gasChart.addPoint([x, data.gas], true, true);
-
+    console.log(data)
     if (data.mode){
       $('#mode').html(data.mode)
       $('#control-mode').prop('checked', data.mode == 'control')
