@@ -29,7 +29,7 @@ class ArduinoChannel < ApplicationCable::Channel
     end
     s.close
   end
-
+#code tu webs gui toi icp server
   def change_light_1(data)
     s = TCPSocket.open("localhost", 18207)
     if data["color"] == "r"
@@ -58,7 +58,7 @@ class ArduinoChannel < ApplicationCable::Channel
   def set_red_light_1(data)
      s = TCPSocket.open("localhost", 18207)
     time = data["time"]
-    d = "redtime=" + time.to_s
+    d = "redtime=<<" + time.to_s + ">>"
     s.puts d
     s.close
   end
@@ -66,7 +66,7 @@ class ArduinoChannel < ApplicationCable::Channel
   def set_green_light_1(data)
      s = TCPSocket.open("localhost", 18207)
     time = data["time"]
-    d = "greentime=" + time.to_s
+    d = "greentime=<<" + time.to_s + ">>"
     s.puts d
     s.close
   end

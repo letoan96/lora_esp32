@@ -300,7 +300,7 @@ $(function() {
     }
     App.arduino.changeMode(mode)
   });
-
+//event get on click
   $('.light-1 input').on('click',function(e){
    if (mode == 'auto') {
       e.preventDefault()
@@ -338,6 +338,7 @@ $(function() {
   //   time_green_1 = e.target.value
   //   App.arduino.set_green_light_1(time_green_1)
   // });
+  //set up thoi gian den khi bam enter
 
   $("#red-time-1").on('keyup', function (e) {
     if (e.keyCode === 13) {
