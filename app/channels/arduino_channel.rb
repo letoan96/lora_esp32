@@ -21,7 +21,7 @@ class ArduinoChannel < ApplicationCable::Channel
 
   def change_mode(data)
     
-    s = TCPSocket.open("localhost", 18207)
+    s = TCPSocket.open("188.166.212.243", 18207)
     if data["mode"] == "auto"
       s.puts "auto"
     else
@@ -31,7 +31,7 @@ class ArduinoChannel < ApplicationCable::Channel
   end
 #code tu webs gui toi icp server
   def change_light_1(data)
-    s = TCPSocket.open("localhost", 18207)
+    s = TCPSocket.open("188.166.212.243", 18207)
     if data["color"] == "r"
       s.puts "red1"
     elsif data["color"] == "g"
@@ -44,7 +44,7 @@ class ArduinoChannel < ApplicationCable::Channel
   end
 
   def change_light_2(data)
-    s = TCPSocket.open("localhost", 18207)
+    s = TCPSocket.open("188.166.212.243", 18207)
     if data["color"] == "r"
       s.puts "red2"
     elsif data["color"] == "g"
@@ -56,7 +56,7 @@ class ArduinoChannel < ApplicationCable::Channel
   end
 
   def set_red_light_1(data)
-     s = TCPSocket.open("localhost", 18207)
+     s = TCPSocket.open("188.166.212.243", 18207)
     time = data["time"]
     d = "redtime=<<" + time.to_s + ">>"
     s.puts d
@@ -64,7 +64,7 @@ class ArduinoChannel < ApplicationCable::Channel
   end
 
   def set_green_light_1(data)
-     s = TCPSocket.open("localhost", 18207)
+     s = TCPSocket.open("188.166.212.243", 18207)
     time = data["time"]
     d = "greentime=<<" + time.to_s + ">>"
     s.puts d
